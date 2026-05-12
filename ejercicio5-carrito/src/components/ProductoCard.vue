@@ -1,6 +1,6 @@
 <script setup>
 import {ref} from 'vue';
-import {useCartStore} from '../stores/CartStore';
+import {useCartStore} from '../stores/cartStore';
 
 const cartStore = useCartStore();
 const products = ref([
@@ -9,7 +9,6 @@ const products = ref([
   { id: 3, nombre: 'Zapatillas', precio: 59.99, stock: 2 },
   { id: 4, nombre: 'Gorra', precio: 14.99, stock: 8 },
 ]);
-const total = ref(0);
 </script>
 
 <template>

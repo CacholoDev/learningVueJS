@@ -1,0 +1,2 @@
+Ejercicio 3 — Calculadora de propinas
+Un input con el total de la cuenta. Tres botones de porcentaje — 10%, 15%, 20%. Muestra cuánto es la propina y el total con propina. Si hay varias personas, divide el total entre ellas.
