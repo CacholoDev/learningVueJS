@@ -1,7 +1,11 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import AddUsuario from './components/AddUsuario.vue';
+import ListUsuarios from './components/ListUsuarios.vue';
 </script>
 
 <template>
-  <HelloWorld />
+    <div class="p-4">
+        <AddUsuario />
+        <ListUsuarios />
+    </div>
 </template>

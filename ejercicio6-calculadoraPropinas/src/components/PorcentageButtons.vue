@@ -21,6 +21,8 @@ const store = usePropinaStore();
         <div class="mb-4">
             <p class="text-xl font-semibold">Monto de la propina: {{ store.propina }}</p>
             <p class="text-xl font-semibold">Total a pagar: {{ store.totalConPropina }}</p>
+            <input v-model.number="store.personas" type="number" min="1" class="w-full p-2 border rounded" placeholder="Ingrese el número de personas">
+            <p class="text-xl font-semibold">Total por persona: {{ store.totalConPropinaPorPersona }}</p>
         </div>
     </div>
 </template>

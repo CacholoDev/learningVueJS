@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: 'usuarios'
+  version: '1.0'
+  description: 'API para la gestions de usuarios'
+servers:
+  - url: 'https://skiandnight.com/api/usuarios/{version}'
+    variables:
+      version:
+        default: '1'
+
+paths:
+
+  /usuarios:
+    get:
+      summary: Devuelve una lista de usuarios.
+      operationId: listaUsuarios
+      responses:
+        200:
+          description: Devuelve una lista de usuarios
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UsuarioDTO'
+
+    post:
+      summary: Agregar un usuario
+      operationId: addUsuario
+      requestBody:
+        description: La informacion del usuario a agregar
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UsuarioDTO'
+      responses:
+        204:
+          description: Usuario creado correctamente
+
+components:
+  schemas:
+
+    UsuarioDTO:
+      type: object
+      properties:
+        nombre:
+          type: string
+        apellido:
+          type: string
+        fechaNacimiento:
+          type: string
+          format: date
+
